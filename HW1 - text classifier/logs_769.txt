@@ -1,0 +1,130 @@
+RUN: {'train': 'data/sst-train.txt', 'dev': 'data/sst-dev.txt', 'test': 'data/sst-test.txt', 'emb_file': 'glove.42B.300d.txt', 'emb_size': 300, 'hid_size': 300, 'hid_layer': 3, 'word_drop': 0.3, 'emb_drop': 0.333, 'hid_drop': 0.1, 'pooling_method': 'avg', 'grad_clip': 5.0, 'max_train_epoch': 11, 'batch_size': 16, 'lrate': 0.005, 'lrate_decay': 0, 'mrate': 0.85, 'log_niter': 100, 'eval_niter': 500, 'model': '9082410649/sst-model.pt', 'dev_output': '9082410649/sst-dev-output.txt', 'test_output': '9082410649/sst-test-output.txt', 'torch_seed': '3481279905298090842'}
+nwords 16583 ntags 5
+Epoch 0, iter 100, train set: loss=1.5250, accuracy=0.33 (533/1600), gradient_norm=4.63, params_norm=804.50, time=1.97s
+Epoch 0, iter 200, train set: loss=1.4435, accuracy=0.34 (552/1600), gradient_norm=4.83, params_norm=804.54, time=3.83s
+Epoch 0, iter 300, train set: loss=1.3868, accuracy=0.37 (595/1600), gradient_norm=4.56, params_norm=804.56, time=5.67s
+Epoch 0, iter 400, train set: loss=1.3621, accuracy=0.40 (634/1600), gradient_norm=4.87, params_norm=804.58, time=7.52s
+Epoch 0, iter 500, train set: loss=1.3235, accuracy=0.42 (670/1600), gradient_norm=4.82, params_norm=804.59, time=9.34s
+Evaluate dev data:
+  -Accuracy: 0.4196 (462/1101)
+  -Update best model at 500, dev accuracy=0.4196
+Saving model to 9082410649/sst-model.pt
+Epoch 1, iter 600, train set: loss=1.2378, accuracy=0.47 (757/1600), gradient_norm=3.80, params_norm=804.61, time=11.92s
+Epoch 1, iter 700, train set: loss=1.2373, accuracy=0.47 (744/1600), gradient_norm=5.00, params_norm=804.62, time=14.04s
+Epoch 1, iter 800, train set: loss=1.2173, accuracy=0.49 (784/1600), gradient_norm=5.00, params_norm=804.63, time=16.02s
+Epoch 1, iter 900, train set: loss=1.2007, accuracy=0.51 (810/1600), gradient_norm=4.19, params_norm=804.64, time=17.94s
+Epoch 1, iter 1000, train set: loss=1.2485, accuracy=0.45 (724/1600), gradient_norm=4.92, params_norm=804.65, time=19.88s
+Evaluate dev data:
+  -Accuracy: 0.4323 (476/1101)
+  -Update best model at 1000, dev accuracy=0.4323
+Saving model to 9082410649/sst-model.pt
+Epoch 2, iter 1100, train set: loss=1.1891, accuracy=0.51 (811/1600), gradient_norm=4.71, params_norm=804.67, time=22.47s
+Epoch 2, iter 1200, train set: loss=1.1575, accuracy=0.52 (835/1600), gradient_norm=5.00, params_norm=804.67, time=24.55s
+Epoch 2, iter 1300, train set: loss=1.1300, accuracy=0.53 (851/1600), gradient_norm=4.56, params_norm=804.69, time=26.62s
+Epoch 2, iter 1400, train set: loss=1.1486, accuracy=0.52 (837/1600), gradient_norm=5.00, params_norm=804.70, time=28.71s
+Epoch 2, iter 1500, train set: loss=1.1265, accuracy=0.54 (858/1600), gradient_norm=4.98, params_norm=804.71, time=30.67s
+Evaluate dev data:
+  -Accuracy: 0.4260 (469/1101)
+Epoch 2, iter 1600, train set: loss=1.1550, accuracy=0.51 (808/1600), gradient_norm=5.00, params_norm=804.72, time=33.19s
+Epoch 3, iter 1700, train set: loss=1.0786, accuracy=0.56 (894/1600), gradient_norm=4.61, params_norm=804.73, time=35.16s
+Epoch 3, iter 1800, train set: loss=1.0467, accuracy=0.57 (918/1600), gradient_norm=4.13, params_norm=804.74, time=37.12s
+Epoch 3, iter 1900, train set: loss=1.0782, accuracy=0.55 (883/1600), gradient_norm=4.94, params_norm=804.75, time=39.16s
+Epoch 3, iter 2000, train set: loss=1.0799, accuracy=0.55 (884/1600), gradient_norm=4.01, params_norm=804.76, time=41.13s
+Evaluate dev data:
+  -Accuracy: 0.4187 (461/1101)
+Epoch 3, iter 2100, train set: loss=1.0842, accuracy=0.55 (881/1600), gradient_norm=5.00, params_norm=804.77, time=43.71s
+Epoch 4, iter 2200, train set: loss=1.0445, accuracy=0.57 (909/1600), gradient_norm=4.56, params_norm=804.78, time=45.71s
+Epoch 4, iter 2300, train set: loss=1.0079, accuracy=0.59 (946/1600), gradient_norm=4.56, params_norm=804.79, time=47.67s
+Epoch 4, iter 2400, train set: loss=1.0021, accuracy=0.59 (937/1600), gradient_norm=4.55, params_norm=804.80, time=49.76s
+Epoch 4, iter 2500, train set: loss=1.0491, accuracy=0.56 (896/1600), gradient_norm=4.89, params_norm=804.81, time=51.71s
+Evaluate dev data:
+  -Accuracy: 0.4269 (470/1101)
+Epoch 4, iter 2600, train set: loss=1.0157, accuracy=0.58 (927/1600), gradient_norm=5.00, params_norm=804.82, time=54.17s
+Epoch 5, iter 2700, train set: loss=0.9996, accuracy=0.60 (954/1600), gradient_norm=5.00, params_norm=804.83, time=56.15s
+Epoch 5, iter 2800, train set: loss=0.9850, accuracy=0.59 (952/1600), gradient_norm=5.00, params_norm=804.84, time=58.15s
+Epoch 5, iter 2900, train set: loss=0.9454, accuracy=0.62 (987/1600), gradient_norm=4.19, params_norm=804.85, time=60.18s
+Epoch 5, iter 3000, train set: loss=0.9719, accuracy=0.60 (965/1600), gradient_norm=5.00, params_norm=804.86, time=62.13s
+Evaluate dev data:
+  -Accuracy: 0.4314 (475/1101)
+Epoch 5, iter 3100, train set: loss=0.9878, accuracy=0.59 (948/1600), gradient_norm=5.00, params_norm=804.87, time=64.66s
+Epoch 5, iter 3200, train set: loss=0.9432, accuracy=0.62 (996/1600), gradient_norm=4.88, params_norm=804.88, time=66.65s
+Epoch 6, iter 3300, train set: loss=0.9225, accuracy=0.62 (988/1600), gradient_norm=4.48, params_norm=804.89, time=68.65s
+Epoch 6, iter 3400, train set: loss=0.9098, accuracy=0.63 (1013/1600), gradient_norm=4.04, params_norm=804.89, time=70.59s
+Epoch 6, iter 3500, train set: loss=0.9213, accuracy=0.62 (995/1600), gradient_norm=4.13, params_norm=804.90, time=72.54s
+Evaluate dev data:
+  -Accuracy: 0.4260 (469/1101)
+Epoch 6, iter 3600, train set: loss=0.9218, accuracy=0.63 (1005/1600), gradient_norm=4.85, params_norm=804.91, time=75.04s
+Epoch 6, iter 3700, train set: loss=0.9291, accuracy=0.62 (994/1600), gradient_norm=4.41, params_norm=804.92, time=77.02s
+Epoch 7, iter 3800, train set: loss=0.8853, accuracy=0.66 (1053/1600), gradient_norm=4.37, params_norm=804.93, time=78.95s
+Epoch 7, iter 3900, train set: loss=0.8777, accuracy=0.66 (1050/1600), gradient_norm=5.00, params_norm=804.94, time=80.95s
+Epoch 7, iter 4000, train set: loss=0.8412, accuracy=0.66 (1060/1600), gradient_norm=4.37, params_norm=804.95, time=82.94s
+Evaluate dev data:
+  -Accuracy: 0.4251 (468/1101)
+Epoch 7, iter 4100, train set: loss=0.8682, accuracy=0.66 (1063/1600), gradient_norm=4.00, params_norm=804.96, time=85.39s
+Epoch 7, iter 4200, train set: loss=0.8803, accuracy=0.64 (1027/1600), gradient_norm=4.23, params_norm=804.97, time=87.40s
+Epoch 8, iter 4300, train set: loss=0.8435, accuracy=0.67 (1074/1600), gradient_norm=4.65, params_norm=804.98, time=89.39s
+Epoch 8, iter 4400, train set: loss=0.7909, accuracy=0.69 (1109/1600), gradient_norm=4.84, params_norm=804.98, time=91.42s
+Epoch 8, iter 4500, train set: loss=0.8039, accuracy=0.67 (1075/1600), gradient_norm=4.49, params_norm=804.99, time=93.42s
+Evaluate dev data:
+  -Accuracy: 0.4233 (466/1101)
+Epoch 8, iter 4600, train set: loss=0.8132, accuracy=0.69 (1096/1600), gradient_norm=3.97, params_norm=805.00, time=95.88s
+Epoch 8, iter 4700, train set: loss=0.8321, accuracy=0.67 (1071/1600), gradient_norm=5.00, params_norm=805.01, time=97.92s
+Epoch 8, iter 4800, train set: loss=0.8495, accuracy=0.65 (1046/1600), gradient_norm=4.82, params_norm=805.02, time=99.95s
+Epoch 9, iter 4900, train set: loss=0.7891, accuracy=0.69 (1100/1600), gradient_norm=4.92, params_norm=805.02, time=101.94s
+Epoch 9, iter 5000, train set: loss=0.7303, accuracy=0.71 (1144/1600), gradient_norm=3.74, params_norm=805.03, time=103.90s
+Evaluate dev data:
+  -Accuracy: 0.4214 (464/1101)
+Epoch 9, iter 5100, train set: loss=0.8124, accuracy=0.67 (1073/1600), gradient_norm=5.00, params_norm=805.04, time=106.43s
+Epoch 9, iter 5200, train set: loss=0.7672, accuracy=0.71 (1143/1600), gradient_norm=4.91, params_norm=805.05, time=108.56s
+Epoch 9, iter 5300, train set: loss=0.7697, accuracy=0.70 (1128/1600), gradient_norm=4.12, params_norm=805.06, time=110.60s
+Epoch 10, iter 5400, train set: loss=0.7625, accuracy=0.71 (1129/1600), gradient_norm=4.49, params_norm=805.07, time=112.69s
+Epoch 10, iter 5500, train set: loss=0.7648, accuracy=0.71 (1134/1600), gradient_norm=5.00, params_norm=805.08, time=114.61s
+Evaluate dev data:
+  -Accuracy: 0.4233 (466/1101)
+Epoch 10, iter 5600, train set: loss=0.7434, accuracy=0.72 (1152/1600), gradient_norm=5.00, params_norm=805.08, time=117.16s
+Epoch 10, iter 5700, train set: loss=0.7418, accuracy=0.71 (1142/1600), gradient_norm=5.00, params_norm=805.09, time=119.11s
+Epoch 10, iter 5800, train set: loss=0.7479, accuracy=0.71 (1136/1600), gradient_norm=5.00, params_norm=805.10, time=121.14s
+Loading model from 9082410649/sst-model.pt
+  -Accuracy: 0.4312 (953/2210)
+  -Save predictions to 9082410649/sst-test-output.txt
+  -Accuracy: 0.4323 (476/1101)
+  -Save predictions to 9082410649/sst-dev-output.txt
+RUN: {'train': 'data/cfimdb-train.txt', 'dev': 'data/cfimdb-dev.txt', 'test': 'data/cfimdb-test.txt', 'emb_file': None, 'emb_size': 300, 'hid_size': 300, 'hid_layer': 3, 'word_drop': 0.3, 'emb_drop': 0.333, 'hid_drop': 0.1, 'pooling_method': 'avg', 'grad_clip': 5.0, 'max_train_epoch': 11, 'batch_size': 16, 'lrate': 0.005, 'lrate_decay': 0, 'mrate': 0.85, 'log_niter': 100, 'eval_niter': 500, 'model': '9082410649/cfimdb-model.pt', 'dev_output': '9082410649/cfimdb-dev-output.txt', 'test_output': '9082410649/cfimdb-test-output.txt', 'torch_seed': '16442678252807554306'}
+nwords 20776 ntags 2
+Epoch 0, iter 100, train set: loss=0.4694, accuracy=0.77 (1234/1600), gradient_norm=4.58, params_norm=48.48, time=4.66s
+Epoch 1, iter 200, train set: loss=0.0980, accuracy=0.97 (1550/1595), gradient_norm=0.28, params_norm=48.90, time=10.16s
+Epoch 2, iter 300, train set: loss=0.0462, accuracy=0.98 (1570/1595), gradient_norm=0.44, params_norm=49.11, time=15.40s
+Epoch 3, iter 400, train set: loss=0.0274, accuracy=0.99 (1581/1595), gradient_norm=4.16, params_norm=49.22, time=20.66s
+Epoch 4, iter 500, train set: loss=0.0112, accuracy=1.00 (1593/1595), gradient_norm=0.01, params_norm=49.28, time=25.97s
+Evaluate dev data:
+  -Accuracy: 0.9306 (228/245)
+  -Update best model at 500, dev accuracy=0.9306
+Saving model to 9082410649/cfimdb-model.pt
+Epoch 5, iter 600, train set: loss=0.0094, accuracy=1.00 (1592/1595), gradient_norm=0.07, params_norm=49.34, time=31.71s
+Epoch 6, iter 700, train set: loss=0.0128, accuracy=1.00 (1588/1595), gradient_norm=0.09, params_norm=49.39, time=37.04s
+Epoch 7, iter 800, train set: loss=0.0180, accuracy=0.99 (1584/1595), gradient_norm=0.29, params_norm=49.46, time=42.39s
+Epoch 8, iter 900, train set: loss=0.0156, accuracy=0.99 (1585/1595), gradient_norm=0.01, params_norm=49.52, time=48.01s
+Epoch 9, iter 1000, train set: loss=0.0125, accuracy=1.00 (1588/1595), gradient_norm=3.54, params_norm=49.57, time=53.37s
+Evaluate dev data:
+  -Accuracy: 0.9020 (221/245)
+Epoch 10, iter 1100, train set: loss=0.0163, accuracy=0.99 (1586/1595), gradient_norm=0.17, params_norm=49.64, time=60.58s
+Loading model from 9082410649/cfimdb-model.pt
+  -Accuracy: 0.5205 (254/488)
+  -Save predictions to 9082410649/cfimdb-test-output.txt
+  -Accuracy: 0.9306 (228/245)
+  -Save predictions to 9082410649/cfimdb-dev-output.txt
+Submission zip file created from DIR=9082410649 for 9082410649: 9082410649.zip
+Read zipfile 9082410649.zip:
+File Name                                             Modified             Size
+9082410649/vocab.py                            2023-02-08 19:46:32         1713
+9082410649/model.py                            2023-02-08 19:46:32         4882
+9082410649/setup.py                            2023-02-08 19:46:32            0
+9082410649/sst-dev-output.txt                  2023-02-08 19:45:22         2202
+9082410649/main.py                             2023-02-08 19:46:32         8737
+9082410649/cfimdb-dev-output.txt               2023-02-08 19:46:32          490
+9082410649/cfimdb-test-output.txt              2023-02-08 19:46:30          976
+9082410649/Report.pdf                          2023-02-08 19:46:32        89041
+9082410649/sst-test-output.txt                 2023-02-08 19:45:22         4420
+#--
+Read zipfile 9082410649.zip, please check that your 10-digit campus id is: 9082410649
+And it contains the following files: ['Report.pdf', 'cfimdb-dev-output.txt', 'cfimdb-test-output.txt', 'main.py', 'model.py', 'setup.py', 'sst-dev-output.txt', 'sst-test-output.txt', 'vocab.py']

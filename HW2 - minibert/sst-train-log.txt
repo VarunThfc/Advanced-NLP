@@ -1,0 +1,22 @@
+args: {'train': 'data/sst-train.txt', 'dev': 'data/sst-dev.txt', 'test': 'data/sst-test.txt', 'seed': 1234, 'epochs': 10, 'option': 'finetune', 'filepath': 'CAMPUSID2/sst-model.pt', 'use_gpu': True, 'dev_out': 'CAMPUSID2/sst-dev-output.txt', 'test_out': 'CAMPUSID2/sst-test-output.txt', 'batch_size': 8, 'hidden_dropout_prob': 0.3, 'lr': 1e-05}
+load 8544 data from data/sst-train.txt
+load 1101 data from data/sst-dev.txt
+save the model to CAMPUSID2/sst-model.pt
+epoch 0: train loss :: 1.261, train acc :: 0.595, dev acc :: 0.497
+save the model to CAMPUSID2/sst-model.pt
+epoch 1: train loss :: 0.972, train acc :: 0.715, dev acc :: 0.499
+save the model to CAMPUSID2/sst-model.pt
+epoch 2: train loss :: 0.727, train acc :: 0.815, dev acc :: 0.510
+epoch 3: train loss :: 0.523, train acc :: 0.895, dev acc :: 0.489
+epoch 4: train loss :: 0.331, train acc :: 0.926, dev acc :: 0.500
+epoch 5: train loss :: 0.209, train acc :: 0.960, dev acc :: 0.501
+epoch 6: train loss :: 0.157, train acc :: 0.976, dev acc :: 0.480
+epoch 7: train loss :: 0.111, train acc :: 0.987, dev acc :: 0.503
+epoch 8: train loss :: 0.088, train acc :: 0.963, dev acc :: 0.501
+save the model to CAMPUSID2/sst-model.pt
+epoch 9: train loss :: 0.091, train acc :: 0.988, dev acc :: 0.514
+load model from CAMPUSID2/sst-model.pt
+load 1101 data from data/sst-dev.txt
+load 2210 data from data/sst-test.txt
+dev acc :: 0.514
+test acc :: 0.535
